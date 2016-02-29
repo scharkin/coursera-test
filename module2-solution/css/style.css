@@ -1,13 +1,12 @@
 /* base */
 * {
   box-sizing: border-box;
-  font-family: fantasy, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
   text-align: center;
   font-size: 1.75em;  
-  font-weight: bold;  
 }
 
 h1 a {
@@ -30,7 +29,6 @@ h2 {
   float: right;
   width: 11em;
   font-size: 1.25em;
-  font-weight: bold;  
   border: 1px solid black;
   margin: 0;
   padding: 5px 0 0 0;
