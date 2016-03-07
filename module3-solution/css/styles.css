@@ -1,0 +1,22 @@
+.navbar {
+  font-weight: bold;
+  background-color: lightgrey;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid grey;
+}
+
+.navbar-brand h1 {
+  font-size: 1.2em;
+}
+
+#nav-list a {
+  text-align: center;
+  border-top: 1px solid grey;
+}
+
+.content {
+  height: 1000px;
+  background-color: lightgrey;
+}
