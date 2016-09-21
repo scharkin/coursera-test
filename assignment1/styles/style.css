@@ -1,0 +1,20 @@
+.message {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.success {
+    color: green
+}
+
+.valid {
+    border: solid 1px green;
+}
+
+.error {
+    color: red;
+}
+
+.invalid {
+    border: solid 1px red;
+}
