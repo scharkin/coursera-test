@@ -34,17 +34,13 @@
 
         // items page
         .state('items', {
-            url: '/items/{categoryId}',
+            url: '/items/{categoryShortName}',
             templateUrl: 'src/menuapp/templates/category-items.template.html',
             controller: "ItemsController as list",
             resolve: {
                 items: ['$stateParams', 'MenuDataService',
                     function($stateParams, MenuDataService) {
-                        return MenuDataService.getAllCategories()
-                            .then(function(categories) {
-                                var category = categories.data[$stateParams.categoryId];
-                                return MenuDataService.getItemsForCategory(category.short_name);
-                            });
+                        return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
                     }
                 ]
             }
