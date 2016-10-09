@@ -1,0 +1,8 @@
+li > a[ui-sref]:hover {
+  background-color: lightblue;
+}
+
+.description {
+  font-size: 0.7em;
+  font-style: italic;
+}
