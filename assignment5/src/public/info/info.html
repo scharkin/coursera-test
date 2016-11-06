@@ -1,0 +1,53 @@
+<div class="container">
+    <h2 class="text-center" ng-if="!infoCtrl.user">
+        Not Signed Up Yet. <a ui-sref="public.register">Sign up Now!</a>
+    </h2>
+    <div ng-if="infoCtrl.user">
+        <h2 class="text-center">Registered information</h2>
+        <hr class="visible-xs">
+        <div class="menu-item-tile col-md-6">
+            <div class="row">
+                <h3>User details</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">First name</div>
+                <div class="col-sm-9">{{infoCtrl.user.firstname}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">Last name</div>
+                <div class="col-sm-9">{{infoCtrl.user.lastname}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">Email</div>
+                <div class="col-sm-9">{{infoCtrl.user.email}}</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">Phone</div>
+                <div class="col-sm-9">{{infoCtrl.user.phone}}</div>
+            </div>
+        </div>
+        <hr class="visible-xs">
+        <div class="menu-item-tile col-md-6">
+            <div class="row">
+                <h3>User favorite dish</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="menu-item-photo">
+                        <div>{{infoCtrl.favoritedish.short_name}}</div>
+                        <img class="img-responsive" width="250" height="150"
+                             ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.favoritedish.short_name}}.jpg"
+                             alt="{{infoCtrl.favoritedish.name}}">
+                    </div>
+                    <div class="menu-item-price">{{infoCtrl.favoritedish.price_small | currency}}<span> {{infoCtrl.favoritedish.small_portion_name}}</span>
+                        {{infoCtrl.favoritedish.price_large | currency}} <span>{{infoCtrl.favoritedish.large_portion_name}}</span>
+                    </div>
+                </div>
+                <div class="menu-item-description col-sm-7">
+                    <h3 class="menu-item-title">{{infoCtrl.favoritedish.name}}</h3>
+                    <p class="menu-item-details">{{infoCtrl.favoritedish.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
