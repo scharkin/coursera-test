@@ -1,0 +1,79 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css">
+</head>
+<body>
+<div id="chart"></div>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+<script>
+  var chart = c3.generate({
+    data: {
+      rows: [
+        ['Add 150 youngest Physicians', 'Balanced Profile', 'Heavy towards quality', 'Market Base'],
+        [.17, .62, .65, .17],
+        [.24, 1.15, 1.76, -.19],
+        [.16, .53, .46, .23]
+      ],
+      type: 'bar',
+      labels: {
+        format: {
+          'Add 150 youngest Physicians': d3.format('%'),
+          'Balanced Profile': d3.format('%'),
+          'Heavy towards quality': d3.format('%'),
+          'Market Base': d3.format('%')
+        }
+      },
+      legend: {
+        position: 'inset',
+        inset: {
+          anchor: 'top-left',
+          y: -52,
+          step: 2
+        }
+      }
+    },
+    axis: {
+      x: {
+        tick: {
+          format: function (d) {
+            switch (d) {
+              case 0:
+                return "Performance + Geographical";
+              case 1:
+                return "Performance Characteristics";
+              default:
+                return "Geographical Characteristics";
+            }
+          }
+        }
+      },
+      y: {
+        show: false
+      }
+    },
+    bar: {
+      width: {
+        ratio: 0.9,
+      }
+    },
+    color: {
+      pattern: ["#A9A9A9", "#87CEFA", "#FFD700", "#b8b1e7"]
+    },
+    grid: {
+      y: {
+        lines: [{value: 0}]
+      }
+    },
+    tooltip: {
+      format: {
+        value: d3.format('%')
+      }
+    }
+
+  });
+
+</script>
+</body>
+</html>
