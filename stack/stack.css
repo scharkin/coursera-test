@@ -1,0 +1,12 @@
+.navbar-gear-icon, .help-icon, .navbar-user-icon {
+  font-size: 16px;
+  color: #2DAFAE;
+  background-color: #FFF;
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  margin: 0 0 0;
+  vertical-align: top;
+  padding: 4px;
+  text-align: center;
+}

@@ -1,4 +1,4 @@
-var data = [{1: 2, 2: 1, 3: 4, 4: 4, 5: 5}];
+var data = [{1: 2, 2: 1, 3: 4, 4: 6, 5: 3}];
 
 var container = d3.select("#chart");
 var margin = {top: 0, right: 20, bottom: 25, left: 20},
@@ -50,7 +50,7 @@ chart.append("g")
   .attr("transform", "rotate(-90)")
   .attr("y", -7)
   .attr("class", "bar-label")
-  .text("Facilites");
+  .text("Items");
 
 var bar = chart.selectAll(".bar")
   .data(data)
